@@ -10,11 +10,24 @@ var rules = { rule1: "1. First rule of SuperX fantasy is you must talk about it!
 	rule3: "The more players the better the fun!"
 };
 
+var riders= { 
 
-//var player1 = { name: "Jake",
-	//rank: 2, 
-	//card: 	
-//};
+};
+
+var player1 = { name: "Jake",
+	rank: []
+
+		
+};
+var player2 = { name: "Jason",
+	rank: []
+
+};
+
+var player3 = { name: "Craig",
+	rank:[]
+
+}
 
 console.log(rules);
 console.log(rules.rule2);
