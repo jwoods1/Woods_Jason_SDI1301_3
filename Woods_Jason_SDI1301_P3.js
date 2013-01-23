@@ -19,15 +19,28 @@ var rules = { rule1: "1. First rule of SuperX fantasy is you must talk about it!
 
 
 //property array
-var enteries = { sx: ["Ryan V. #1", "Ryan D. #5", "James S. #7", "Justin B. #10", "Kyle C. #11", "Jake W. #12", "David M. #18",
- 					"Broc T. #20", "Chad R. #22", "Andrew S. #29", "Josh G. #33", "Rober K. #39", "Trey C. #41", "Vince F. #42", "Weston P. #46", "Matt L. #47",
- 					"Justin B. #51", "Jimmy A. #55", "Matt G. #62", "Mike A. #800", "Phillip N. #49", "Les S. #54"],
- 					sxLite: ["Eli T. #1", "Jason A. #21", "Jake C. #23", "Tyla R. #28", "Travis B. #31", "Malcolm S. #32", "Ryan S. #35", "Jessy N. #36", 
- 					"Kyle C. #38","Martin D. #40", "Cole S. #43", "Christian C. #59", "Derek A. # 63", "Killian R. #66", "Dakota T. #72", "Max A. #74", 
- 					"Austin P. #76", "Scott C. #78", "Michael L. #80", "Topher I. #91", "Ken R. #94", "Chris P. #98"]
-
-
+var enteries = { 
+	sx: ["Ryan V. #1", "Ryan D. #5", "James S. #7", "Justin B. #10", "Kyle C. #11", "Jake W. #12", "David M. #18",
+ 		"Broc T. #20", "Chad R. #22", "Andrew S. #29", "Josh G. #33", "Rober K. #39", "Trey C. #41", "Vince F. #42", "Weston P. #46", "Matt L. #47",
+ 		"Justin B. #51", "Jimmy A. #55", "Matt G. #62", "Mike A. #800", "Phillip N. #49", "Les S. #54"],
+ 	
+ 	sxLite: ["Eli T. #1", "Jason A. #21", "Jake C. #23", "Tyla R. #28", "Travis B. #31", "Malcolm S. #32", "Ryan S. #35", "Jessy N. #36", 
+ 		"Kyle C. #38","Martin D. #40", "Cole S. #43", "Christian C. #59", "Derek A. # 63", "Killian R. #66", "Dakota T. #72", "Max A. #74", 
+ 		"Austin P. #76", "Scott C. #78", "Michael L. #80", "Topher I. #91", "Ken R. #94", "Chris P. #98"]
 };
+var players = { 
+	jason: { name: "Jason", rank: " ", picks: [ ]
+
+	},
+	craig: { name: "Craig", rank: " ", picks: [ ]
+
+	},
+	jake: { name: "Jake", rank: " ", picks: []
+
+	}
+
+
+}
 
 //while () {}
 
