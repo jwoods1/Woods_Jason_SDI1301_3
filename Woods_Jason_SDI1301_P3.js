@@ -41,7 +41,7 @@ var rules = { rule1: "1. First rule of SuperX fantasy is you must talk about it!
 
 
 
-//while loop / method mutator
+//while loop /return array
 function arrayShuffle (oldArray) {
 	var newArray = oldArray.slice();
 	var len = newArray.length;
@@ -53,21 +53,43 @@ function arrayShuffle (oldArray) {
 		newArray[p] = t;
 	}
 	return newArray;
-}
+};
 
-//method function
+//method procedure
 var players = { 
-	jason: { name: "Jason", rank: " ", picks450: (arrayShuffle(json1.enteries.sx)), picks250: (arrayShuffle(json1.enteries.sxLite))
+	jason: { name: "Jason", 
+		rank: " ", 
+		picks450: (arrayShuffle(json1.enteries.sx)), 
+		picks250: (arrayShuffle(json1.enteries.sxLite))
 	},
-	craig: { name: "Craig", rank: " ", picks450: (arrayShuffle(json1.enteries.sx)), picks250: (arrayShuffle(json1.enteries.sxLite))
+	craig: { name: "Craig", 
+		rank: " ", 
+		picks450: (arrayShuffle(json1.enteries.sx)), 
+		picks250: (arrayShuffle(json1.enteries.sxLite))
 	},
-	jake: { name: "Jake", rank: " ", picks450: (arrayShuffle(json1.enteries.sx)), picks250: (arrayShuffle(json1.enteries.sxLite))
+	jake: { name: "Jake", 
+		rank: " ", 
+		picks450: (arrayShuffle(json1.enteries.sx)), 
+		picks250: (arrayShuffle(json1.enteries.sxLite))
 	},
 	playerPicks: function (pick) {
 	for (var i = 0; i < pick.length; i++){
 		console.log(pick[i]);
 	};
 }
+};
+var results = {
+	sx450: {sxResults: (arrayShuffle(json1.enteries.sx))} , 
+	sxLite: {sxLiteResults: (arrayShuffle(json1.enteries.sxLite)) } ,
+	playerRank: {},
+		raceResults: function (result) {
+			var log = console.log("<<<<<<<<<<<<THE RESULTS ARE IN!!!!!!!!!!!>>>>>>>>>>>>");
+			for (var i = 0; i < result.length; i++){
+			console.log(result[i]);
+			};
+			return log;
+	}
+	
 };
 
 /*var playerPicks = function (pick) {
@@ -78,24 +100,33 @@ var players = {
 
 arrayShuffle(json1.enteries.sx);
 console.log(welcome);
+console.log("<<<<<<<<<<<<<<<  >>>>>>>>>>>>>>>>>>>>");
 console.log(eRacersX);
 handleData(json1);
+console.log("<<<<<<<<<<<<<<<  >>>>>>>>>>>>>>>>>>>>");
 console.log(eRacersL);
 handleDataLite(json1);
-console.log(players.jason.name + "s 450 picks are: " + " 250 picks are: ");
+console.log("<<<<<<<<<<<<<<<  >>>>>>>>>>>>>>>>>>>>");
+console.log(players.jason.name + "s 450 picks are: ");
 players.playerPicks(players.jason.picks450);
+console.log("<<<<<<<<<<<<<<<  >>>>>>>>>>>>>>>>>>>>");
 console.log(players.jason.name + "s 250 picks are: ");
 players.playerPicks(players.jason.picks250);
+console.log("<<<<<<<<<<<<<<<  >>>>>>>>>>>>>>>>>>>>");
 console.log(players.craig.name + "s 450 picks are: ");
 players.playerPicks(players.craig.picks450);
+console.log("<<<<<<<<<<<<<<<  >>>>>>>>>>>>>>>>>>>>");
 console.log(players.craig.name + "s 250 picks are: ");
 players.playerPicks(players.craig.picks250);
+console.log("<<<<<<<<<<<<<<<  >>>>>>>>>>>>>>>>>>>>");
 console.log(players.jake.name + "s 450 picks are: ");
 players.playerPicks(players.jake.picks450);
+console.log("<<<<<<<<<<<<<<<  >>>>>>>>>>>>>>>>>>>>");
 console.log(players.jake.name + "s 250 picks are: ");
 players.playerPicks(players.jake.picks250);
-
-
+console.log;
+results.raceResults(arrayShuffle(json1.enteries.sx));
+results.raceResults;
 
 
 
