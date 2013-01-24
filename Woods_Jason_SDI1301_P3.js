@@ -3,6 +3,8 @@
 // SDI 1301
 // Project 3
 // The Game
+
+//json data
 var json1 = {
 	"enteries" : {	
 	"sx": ["Ryan V. #1", "Ryan D. #5", "James S. #7", "Justin B. #10", "Kyle C. #11", "Jake W. #12", "David M. #18",
@@ -14,6 +16,7 @@ var json1 = {
  	
 	}
 };
+//for loop
 var handleData = function (json) {
 	for (var i = 0; i < json.enteries.sx.length; i++){
 		console.log(json.enteries.sx[i]);
@@ -25,14 +28,10 @@ var handleDataLite = function(json) {
 		console.log(json.enteries.sxLite [i]);
 	};
 }
-
+//global var
 var welcome = ("Welcome to your first experiance in Fantasy SuperCross!");
 var eRacersX = ("The 450 race enteries are as follows:");
 var eRacersL = ("The 250 race enteries are as follows:");
-
-
-
-
 
 var rules = { rule1: "1. First rule of SuperX fantasy is you must talk about it!",
 	rule2: "2. SuperX fantasy is a fanstasy style motor sport game",
@@ -40,55 +39,37 @@ var rules = { rule1: "1. First rule of SuperX fantasy is you must talk about it!
 };
 
 
-//property array
-/*var enteries = {	
-	"sx": ["Ryan V. #1", "Ryan D. #5", "James S. #7", "Justin B. #10", "Kyle C. #11", "Jake W. #12", "David M. #18",
- 		"Broc T. #20", "Chad R. #22", "Andrew S. #29", "Josh G. #33", "Rober K. #39", "Trey C. #41", "Vince F. #42", "Weston P. #46", "Matt L. #47",
- 		"Justin B. #51", "Jimmy A. #55", "Matt G. #62", "Mike A. #800", "Phillip N. #49", "Les S. #54"]
- 	},
- 	{
- 	"sxLite": ["Eli T. #1", "Jason A. #21", "Jake C. #23", "Tyla R. #28", "Travis B. #31", "Malcolm S. #32", "Ryan S. #35", "Jessy N. #36", 
- 		"Kyle C. #38","Martin D. #40", "Cole S. #43", "Christian C. #59", "Derek A. # 63", "Killian R. #66", "Dakota T. #72", "Max A. #74", 
- 		"Austin P. #76", "Scott C. #78", "Michael L. #80", "Topher I. #91", "Ken R. #94", "Chris P. #98"]
- 	}
- 		
-};*/
 
-var players = { 
-	jason: { name: "Jason", rank: " ", picks: [ ]
-
-	},
-	craig: { name: "Craig", rank: " ", picks: [ ]
-
-	},
-	jake: { name: "Jake", rank: " ", picks: [ ]
-
-	}
-
-
-}
 
 //while () {}
+function arrayShuffle (oldArray) {
+	var newArray = oldArray.slice();
+	var len = newArray.length;
+	var i = len;
+	while (i--) {
+		var p = parseInt(Math.random()*len);
+		var t = newArray[i];
+		newArray[i] = newArray[p];
+		newArray[p] = t;
+	}
+	return newArray;
+}
+
+
+var players = { 
+	jason: { name: "Jason", rank: " ", picks: (arrayShuffle(json1.enteries.sx))
+	},
+	craig: { name: "Craig", rank: " ", picks: (arrayShuffle(json1.enteries.sx))
+	},
+	jake: { name: "Jake", rank: " ", picks: (arrayShuffle(json1.enteries.sx))
+	}
+};
 
 
 
-
+arrayShuffle(json1.enteries.sx);
 console.log(welcome);
 console.log(eRacersX);
-//console.log(enteries.sx);
-//console.log(enteries);
-
-/*for (var i =0; i < enteries.sx.length; i++) {
-	console.log("450 SX Racer:");
-	console.log(enteries.sx[i]);
-};
-console.log(eRacersL);
-for (var i =0; i < enteries.sxLite.length; i++) {
-	console.log("250 Lite Racer:");
-	console.log(enteries.sxLite[i]);
-};
-
-console.log(players);*/
 
 
 
@@ -96,6 +77,9 @@ console.log(players);*/
 handleData(json1);
 console.log(eRacersL);
 handleDataLite(json1);
+
+console.log(players);
+
 
 /*var welcome = (" Welcome to your first experiance in Fantasy SuperCross!")
 var rules = { rule1: "1. First rule of SuperX fantasy is you must talk about it!",
@@ -175,4 +159,31 @@ var enterprise = pirateShip("Enterprise");
 console.log(dauntless);
 */
 
+//property array
+/*var enteries = {	
+	"sx": ["Ryan V. #1", "Ryan D. #5", "James S. #7", "Justin B. #10", "Kyle C. #11", "Jake W. #12", "David M. #18",
+ 		"Broc T. #20", "Chad R. #22", "Andrew S. #29", "Josh G. #33", "Rober K. #39", "Trey C. #41", "Vince F. #42", "Weston P. #46", "Matt L. #47",
+ 		"Justin B. #51", "Jimmy A. #55", "Matt G. #62", "Mike A. #800", "Phillip N. #49", "Les S. #54"]
+ 	},
+ 	{
+ 	"sxLite": ["Eli T. #1", "Jason A. #21", "Jake C. #23", "Tyla R. #28", "Travis B. #31", "Malcolm S. #32", "Ryan S. #35", "Jessy N. #36", 
+ 		"Kyle C. #38","Martin D. #40", "Cole S. #43", "Christian C. #59", "Derek A. # 63", "Killian R. #66", "Dakota T. #72", "Max A. #74", 
+ 		"Austin P. #76", "Scott C. #78", "Michael L. #80", "Topher I. #91", "Ken R. #94", "Chris P. #98"]
+ 	}
+ 		
+};*/
+//console.log(enteries.sx);
+//console.log(enteries);
+
+/*for (var i =0; i < enteries.sx.length; i++) {
+	console.log("450 SX Racer:");
+	console.log(enteries.sx[i]);
+};
+console.log(eRacersL);
+for (var i =0; i < enteries.sxLite.length; i++) {
+	console.log("250 Lite Racer:");
+	console.log(enteries.sxLite[i]);
+};
+
+console.log(players);*/
 
