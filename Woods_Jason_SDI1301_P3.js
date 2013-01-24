@@ -41,7 +41,7 @@ var rules = { rule1: "1. First rule of SuperX fantasy is you must talk about it!
 
 
 
-//while () {}
+//while loop / method mutator
 function arrayShuffle (oldArray) {
 	var newArray = oldArray.slice();
 	var len = newArray.length;
@@ -55,21 +55,26 @@ function arrayShuffle (oldArray) {
 	return newArray;
 }
 
-
+//method function
 var players = { 
 	jason: { name: "Jason", rank: " ", picks450: (arrayShuffle(json1.enteries.sx)), picks250: (arrayShuffle(json1.enteries.sxLite))
 	},
 	craig: { name: "Craig", rank: " ", picks450: (arrayShuffle(json1.enteries.sx)), picks250: (arrayShuffle(json1.enteries.sxLite))
 	},
 	jake: { name: "Jake", rank: " ", picks450: (arrayShuffle(json1.enteries.sx)), picks250: (arrayShuffle(json1.enteries.sxLite))
-	}
+	},
+	playerPicks: function (pick) {
+	for (var i = 0; i < pick.length; i++){
+		console.log(pick[i]);
+	};
+}
 };
 
-var playerPicks = function (pick) {
+/*var playerPicks = function (pick) {
 	for (var i = 0; i < pick.length; i++){
 		console.log(pick[i]);
 	}
-}
+}*/
 
 arrayShuffle(json1.enteries.sx);
 console.log(welcome);
@@ -77,18 +82,31 @@ console.log(eRacersX);
 handleData(json1);
 console.log(eRacersL);
 handleDataLite(json1);
-console.log(players.jason.name + "s 450 picks are: ");
-playerPicks(players.jason.picks450);
+console.log(players.jason.name + "s 450 picks are: " + " 250 picks are: ");
+players.playerPicks(players.jason.picks450);
 console.log(players.jason.name + "s 250 picks are: ");
-playerPicks(players.jason.picks250);
+players.playerPicks(players.jason.picks250);
 console.log(players.craig.name + "s 450 picks are: ");
-playerPicks(players.craig.picks450);
+players.playerPicks(players.craig.picks450);
 console.log(players.craig.name + "s 250 picks are: ");
-playerPicks(players.craig.picks250);
+players.playerPicks(players.craig.picks250);
 console.log(players.jake.name + "s 450 picks are: ");
-playerPicks(players.jake.picks450);
+players.playerPicks(players.jake.picks450);
 console.log(players.jake.name + "s 250 picks are: ");
-playerPicks(players.jake.picks250);
+players.playerPicks(players.jake.picks250);
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*var welcome = (" Welcome to your first experiance in Fantasy SuperCross!")
 var rules = { rule1: "1. First rule of SuperX fantasy is you must talk about it!",
